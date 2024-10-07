@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "fb3a380c-69fc-4a2c-a119-05dcadd667b8",
+		"name": "Recipe Crud API",
+		"description": "This API allows users to perform CRUD operations (Create, Read, Update, Delete) on a collection of Indian recipes. The API is built with Node.js, Express, and Mongoose for MongoDB and follows the MVC pattern.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38832144"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/api/recipes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Chicken Biryani\",\r\n  \"ingredients\": [\"Chicken\", \"Basmati Rice\", \"Onions\", \"Tomatoes\", \"Spices\", \"Yogurt\"],\r\n  \"instructions\": \"Cook chicken with spices and yogurt. Layer partially cooked basmati rice on top. Slow-cook the mixture until flavors blend.\",\r\n  \"prepTime\": 30,\r\n  \"cookTime\": 60,\r\n  \"servings\": 4\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/recipes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"recipes"
+					]
+				},
+				"description": "Creates a new recipe by providing details such as title, ingredients, instructions, prep time, cook time, and servings. The request body should be in JSON format."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/recipes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/recipes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"recipes"
+					]
+				},
+				"description": "Retrieves a list of all available recipes in the database. No parameters are required for this request."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/recipes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Palak Paneer\",\r\n  \"ingredients\": [\"Spinach\", \"Paneer\", \"Onions\", \"Tomatoes\", \"Garlic\", \"Spices\"],\r\n  \"instructions\": \"Cook spinach and paneer separately. Prepare a tomato-onion gravy with spices. Mix spinach and paneer into the gravy.\",\r\n  \"prepTime\": 15,\r\n  \"cookTime\": 25,\r\n  \"servings\": 4\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/recipes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"recipes"
+					]
+				},
+				"description": "Creates a new recipe by providing details such as title, ingredients, instructions, prep time, cook time, and servings. The request body should be in JSON format."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/recipes/6703dc13792ebca593b99f3e",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/recipes/6703dc13792ebca593b99f3e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"recipes",
+						"6703dc13792ebca593b99f3e"
+					]
+				},
+				"description": "Retrieves a specific recipe by its unique ID from the database. Replace `:id` with the recipe’s `_id`."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/recipes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Masala Dosa\",\r\n  \"ingredients\": [\"Rice\", \"Urad Dal\", \"Potatoes\", \"Onions\", \"Spices\"],\r\n  \"instructions\": \"Make dosa batter with rice and urad dal. Cook the dosa and fill with spiced potato-onion mixture.\",\r\n  \"prepTime\": 20,\r\n  \"cookTime\": 40,\r\n  \"servings\": 3\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/recipes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"recipes"
+					]
+				},
+				"description": "Creates a new recipe by providing details such as title, ingredients, instructions, prep time, cook time, and servings. The request body should be in JSON format."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/recipes/6703dc7f792ebca593b99f41",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Masala Dosa\",\r\n  \"ingredients\": [\"Rice\", \"Urad Dal\", \"Potatoes\", \"Onions\", \"Spices\"],\r\n  \"instructions\": \"Make dosa batter with rice and urad dal. Cook the dosa and fill with spiced potato-onion mixture.\",\r\n  \"prepTime\": 20,\r\n  \"cookTime\": 45,\r\n  \"servings\": 4\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/recipes/6703dc7f792ebca593b99f41",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"recipes",
+						"6703dc7f792ebca593b99f41"
+					]
+				},
+				"description": "Updates an existing recipe by its unique ID. Provide the updated recipe details in the request body. Replace `:id` with the recipe’s `_id`."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/recipes/6703dc7f792ebca593b99f41",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/recipes/6703dc7f792ebca593b99f41",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"recipes",
+						"6703dc7f792ebca593b99f41"
+					]
+				},
+				"description": "Deletes a specific recipe from the database by its unique ID"
+			},
+			"response": []
+		}
+	]
+}
