@@ -8,6 +8,9 @@ router.get('/', recipeController.getAllRecipes);
 // POST a new recipe
 router.post('/', recipeController.createRecipe);
 
+// create multiple recipe
+router.post('/multipleRecipe', recipeController.createMultipleRecipe);
+
 // GET a single recipe by ID
 router.get('/:id', recipeController.getRecipeById);
 

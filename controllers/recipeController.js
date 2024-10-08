@@ -88,3 +88,14 @@ exports.deleteRecipe = async (req, res) => {
     res.status(500).json({ message: 'Server Error', error: error.message });
   }
 };
+
+exports.createMultipleRecipe = async (req, res) => {
+  try {
+    const recipes = req.body;
+    if (!recipes) return res.status(404).json({ message: 'Recipe not found' });
+    await Recipe.insertMany(recipes);
+    res.status(201).json(savedRecipe);
+  }  catch (error) {
+    res.status(500).json({ message: 'Server Error', error: error.message });
+  }
+};
